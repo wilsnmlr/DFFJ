@@ -1,0 +1,8 @@
+sg = sendgrid.SendGridClient("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")
+message = sendgrid.Mail()
+
+message.add_to("test@sendgrid.com")
+message.set_from("726986616@qq.com")
+message.set_subject("Sending with SendGrid is Fun")
+message.set_html("and easy to do anywhere, even with Python")
+sg.send(message)
